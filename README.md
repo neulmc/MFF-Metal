@@ -1,5 +1,5 @@
 # Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation
-This is the source code of "Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation". 
+This is the source code of "Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation" built by [Mingchun Li](https://orcid.org/0000-0001-7780-3213). 
 
 ### Introduction:
 
