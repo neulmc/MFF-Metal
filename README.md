@@ -23,13 +23,6 @@ We propose a deep learning method named MFF-Metal based on multi-scale feature f
 
 During and after training, the predictions and checkpoints are saved and the "log_file" is constructed for recording losses and performances.
 
-### Dataset
-This dataset is sourced from the Global Artificial Intelligence Algorithm Elite Open Challenge hosted by Chinese Jiangsu Artificial Intelligence Society [http://bdc.saikr.com/c/rl/50185]. 
-The dataset partitioning strictly follows the requirements of the competition group. 
-We have achieved the highest level of awards among over 400 teams from around the world. 
-This code repository is an extension of our work in the open challenge competition.
-In the paper, we conducted more comparative experiments and analytical discussions to further demonstrate the effectiveness and innovation of the method.
-
 ### Results on NEU-Seg Dataset
 |Method | Inclusion |  Patch |  Scratch |  mIoU | 
 |:-----|:------:|:-----:| :-----:| :-----:| 
