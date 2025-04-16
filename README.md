@@ -60,7 +60,7 @@ after the necessary model adjustments
 (the number of original metal defect categories should be adjusted to the number of defect types in the road image dataset).
 The prediction results in for our metal dataset and road defect dataset are shown below.
 
-<img src="https://github.com/neulmc/MFF-Metal/blob/main/FPS/r1.png">
+<img src="https://github.com/neulmc/MFF-Metal/blob/main/FPS/c1.png">
 
 Although we do not introduce experimental results on other datasets in this manuscript, 
 the proposed method can also achieve good prediction results in the road surface defect segmentation task. 
