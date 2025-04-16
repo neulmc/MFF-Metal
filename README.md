@@ -58,6 +58,14 @@ And the original dataset can be found in [4].
 Once the dataset is downloaded, the segmentation task can be implemented by executing the "train_road.py" file, 
 after the necessary model adjustments 
 (the number of original metal defect categories should be adjusted to the number of defect types in the road image dataset).
+The prediction results in for our metal dataset and road defect dataset are shown below.
+
+<img src="https://github.com/neulmc/MFF-Metal/blob/main/FPS/r1.png">
+
+Although we do not introduce experimental results on other datasets in this manuscript, 
+the proposed method can also achieve good prediction results in the road surface defect segmentation task. 
+Developing defect detection methods capable of handling more complex scenarios 
+and broader application domains warrants further investigation.
 
 ### References
 [1] <a href="https://github.com/Greak-1124/LMFFNet">LMFFNet: A Well-Balanced Lightweight Network for Fast and Accurate Semantic Segmentation.</a>
