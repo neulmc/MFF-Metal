@@ -1,5 +1,5 @@
 # Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation
-This is the source code of "Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation" built by [Mingchun Li](https://orcid.org/0000-0001-7780-3213). 
+This is the source code of "Lightweight metal surface defect segmentation method based on multiscale feature fusion and knowledge distillation". 
 
 ### Introduction:
 
@@ -23,6 +23,13 @@ We propose a deep learning method named MFF-Metal based on multi-scale feature f
 
 During and after training, the predictions and checkpoints are saved and the "log_file" is constructed for recording losses and performances.
 
+### Dataset
+This dataset is sourced from the Global Artificial Intelligence Algorithm Elite Open Challenge hosted by Chinese Jiangsu Artificial Intelligence Society [http://bdc.saikr.com/c/rl/50185]. 
+The dataset partitioning strictly follows the requirements of the competition group. 
+We have achieved the highest level of awards among over 400 teams from around the world. 
+This code repository is an extension of our work in the open challenge competition.
+In the paper, we conducted more comparative experiments and analytical discussions to further demonstrate the effectiveness and innovation of the method.
+
 ### Results on NEU-Seg Dataset
 |Method | Inclusion |  Patch |  Scratch |  mIoU | 
 |:-----|:------:|:-----:| :-----:| :-----:| 
@@ -42,6 +49,16 @@ In actual deployment and implementation scenarios, the corresponding model can b
 This is the final model and log file in our paper. We used this model to evaluate. You can download by:
 https://pan.baidu.com/s/1crHmNQxl4ZegfMBWPFkvSw?pwd=jwna code: jwna.
 
+
+### News!
+We implemented the road defect segmentation task based on the current model. 
+The divided training and test sets can be found in the following link, and the size of each image is 320×320. 
+https://pan.baidu.com/s/1mCKu8fEO-UMsM_UOlmWTVg?pwd=z48z code: z48z. 
+And the original dataset can be found in [4]. 
+Once the dataset is downloaded, the segmentation task can be implemented by executing the "train_road.py" file, 
+after the necessary model adjustments 
+(the number of original metal defect categories should be adjusted to the number of defect types in the road image dataset).
+
 ### References
 [1] <a href="https://github.com/Greak-1124/LMFFNet">LMFFNet: A Well-Balanced Lightweight Network for Fast and Accurate Semantic Segmentation.</a>
 
@@ -49,3 +66,4 @@ https://pan.baidu.com/s/1crHmNQxl4ZegfMBWPFkvSw?pwd=jwna code: jwna.
 
 [3] <a href="https://arxiv.org/abs/1505.04597">U-Net: Convolutional Networks for Biomedical Image Segmentation.</a>
 
+[4] <a href="https://ieeexplore.ieee.org/abstract/document/8694955"> Feature Pyramid and Hierarchical Boosting Network for Pavement Crack Detection.</a>
