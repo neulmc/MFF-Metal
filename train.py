@@ -22,41 +22,39 @@ import torch.nn as nn
 import torch.nn.functional as F
 #import transunet
 
-# mode是模型选择；name是保存的路径名（记录每次调参的标识）
 mode = 'OurModel'  # OurModel, Unet, NestedUNet, AttU_Net, transnet, TeaModel
-name = 'LMC-cN-BCEDiceBou1e-4-KD'  # 描述这次实验改了哪些内容，用来记录，比如：bce1_dice05_bound005_tiny32mb25_lrdecay01
+name = 'LMC-cN-BCEDiceBou1e-4-KD'
 dataset_dir = 'NEU_Seg-main'
 TMP_DIR = mode + '_' + name
 
-# 基础调参（这几个参数我从来没调过，完全根据经验，调整后可能会有帮助）
 lr = 1e-3
 batch_size = 15
 maxepoch = 301
 sche_gamma = 0.5
 sche_miles = [100, 120, 150, 260]
-# 损失调参（bound_weight效果偏负面，不宜太大）
+
 bce_weight = 1  # 1
 dice_weight = 0.5  # 0.5
 bound_weight = 1e-4  # 0.01
-# 模型调参（这三个参数可能有用,舒婷做一个参数1m之内的，蕤韬做一个1m以上的（多大都行，比如10m），要求蕤韬miou效果比舒婷高）
+
 model_block0 = 2
 model_block1 = 2  #
 model_block2 = 6  #
 channel = [30,60,90,120]
-# 数据增强调参（这几个参数我从来没调过，完全根据经验，调整后可能会有帮助）
+
 jitter_d = 0.3
 jitter_p = 0.2
-random_c = 0  # 这个不太好，也许应该一直 = 0
+random_c = 0
 
-# 评估设置（基本不用动）
+
 eval_freq = 10
 print_freq = 10
-m_c = 32  # 对比模型的通道
+m_c = 32
 
-# 知识蒸馏调参
-T_KD = True  # 这个参数，只有当训练小模型时才为 True, 否则都是 False
-T = 0.7  # 温度系数
-T_weight = 1  # 损失权重
+
+T_KD = True
+T = 0.7
+T_weight = 1
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 seed = 1029
